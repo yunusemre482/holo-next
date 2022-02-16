@@ -1,9 +1,10 @@
 import './App.css';
+import Slider from "./components/Slider";
 
 function App() {
   return (
     <div className="App">
-      <h1>Set up Github and Github Pages</h1>
+      <Slider/>
     </div>
   );
 }

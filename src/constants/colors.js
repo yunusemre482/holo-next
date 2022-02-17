@@ -148,7 +148,10 @@ export const COLORS = [
     'yellowgreen',
 ];
 
-const colors = {
+export const colors = {
+    color1:"#f5fafd",
+    color2:"#fcf1ed",
+    color3:"#fbf0f4",
     background: '#F9F9FB',
     textDark: '#313234',
     primary: '#F5CA48',
@@ -158,5 +161,3 @@ const colors = {
     white: '#FFF',
     black: '#000',
   };
-  
-  export default colors;

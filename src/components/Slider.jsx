@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {items} from '../constants/data';
 import {mobile} from '../responsive/mobile';
+import Viewer from "../pages/Viewer";
 
 const Container = styled.div`
   width: 100%;
@@ -32,7 +33,6 @@ const Arrow = styled.div`
   z-index: 2;
 `;
 
-
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
@@ -44,21 +44,20 @@ const ItemContainer = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  ${mobile({display: "none"})}
+  ${mobile({display: 'none'})}
   background-color: ${(props) => props.backColor};
 `;
 
 const Image = styled.img`
-
-  margin-left:30px;
+  margin-left: 30px;
   height: 80%;
   width: 100%;
   border-radius: 5;
 `;
 
 const Title = styled.div`
-  font-size:36px;
-  font-weight:600;
+  font-size: 36px;
+  font-weight: 600;
 `;
 
 const ImageContainer = styled.div`
@@ -80,11 +79,12 @@ const Button = styled.button`
   padding: 10px;
   font-size: 18px;
   border-radius: 12%;
-  border-color:#aad;
+  border-color: #aad;
   background-color: transparent;
   cursor: pointer;
 `;
-const Slider = () => {
+const Slider = ({changeId}) => {
+  
   const [gridIndex, setgridIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === 'left') {
@@ -94,6 +94,7 @@ const Slider = () => {
     }
   };
 
+
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick('left')}>
@@ -102,13 +103,13 @@ const Slider = () => {
       <Wrapper gridIndex={gridIndex}>
         {items.map((item) => (
           <ItemContainer backColor={item.backColor} key={item.id}>
-            <ImageContainer>{console.log(item.backColor)}
+            <ImageContainer>
               <Image src={item.image} />
             </ImageContainer>
             <InfoContainer>
               <Title>{item.title}</Title>
               <Description>{item.description}</Description>
-              <Button >VIEW IN 3D </Button>
+              <Button onClick={()=>{changeId(item.id)}}>VIEW IN 3D  </Button>
             </InfoContainer>
           </ItemContainer>
         ))}
@@ -121,4 +122,3 @@ const Slider = () => {
 };
 
 export default Slider;
-

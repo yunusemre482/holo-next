@@ -3,7 +3,7 @@ import {useState} from 'react';
 import React from 'react';
 import styled from 'styled-components';
 import {items} from '../constants/data';
-import {mobile} from '../responsive/';
+import {mobile} from '../responsive/mobile';
 
 const Container = styled.div`
   width: 100%;
@@ -11,7 +11,6 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
-  ${mobile({display: "none"})}
 `;
 
 const Arrow = styled.div`
@@ -33,10 +32,11 @@ const Arrow = styled.div`
   z-index: 2;
 `;
 
+
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transition: all 1.4s ease-in;
+  transition: all 1.2s ease;
   transform: translateX(${(props) => props.gridIndex * -100}vw);
 `;
 const ItemContainer = styled.div`

@@ -48,7 +48,7 @@ const HamburgerMenu = () => {
         ariaLabel="This is basic hamburger menu"
         icon={<SpeedDialIcon />}
         enablemouseactions="true"
-        sx={{position: 'absolute', bottom: 16, left: 16}}
+        sx={{position: 'absolute', bottom: "16px", left: "16px"}}
         onClose={handleClose}
         onOpen={handleOpen}
         open={open}

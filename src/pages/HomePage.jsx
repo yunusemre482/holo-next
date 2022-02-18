@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import HamburgerMenu from '../components/HamburgerMenu';
 import Slider from '../components/Slider';
-import Viewer from './Viewer';
 
 const HomePage = () => {
   return (

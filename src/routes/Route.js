@@ -4,7 +4,7 @@ import Viewer from '../pages/Viewer';
 
 const Route = () => {
     // state to track URL and force component to re-render on change
-    const [routeInfo, setCurrentPath] = useState({path:window.location.pathname,id:window.location.pathname.split("/")[2] || null});
+    const [routeInfo, setCurrentPath] = useState({path:window.location.pathname,id:window.location.pathname.split("/")[3] || null});
     console.log(routeInfo);
     useEffect(() => {
         // define callback as separate function so it can be removed later with cleanup function

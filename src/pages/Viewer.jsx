@@ -1,8 +1,7 @@
 import React from 'react';
 import {CloseOutlined} from '@material-ui/icons';
 import styled from 'styled-components';
-import {COLORS} from '../constants/colors';
-import { mobile } from '../responsive/mobile';
+
 const Container = styled.div`
   position: absolute;
   width: 97%;
@@ -33,7 +32,7 @@ const Viewer = ({sceneId}) => {
       <holonext-viewer sceneId={sceneId}></holonext-viewer>
       <CloseButton
         onClick={() => {
-          window.location.pathname = `/`;
+          window.location.pathname = `/holo-next/`;
         }}>
         <CloseOutlined />
       </CloseButton>

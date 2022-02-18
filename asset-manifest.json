@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/holo-next/static/css/main.abd64e84.css",
-    "main.js": "/holo-next/static/js/main.7c2c9f5a.js",
+    "main.js": "/holo-next/static/js/main.d7d9bfea.js",
     "static/media/image2.png": "/holo-next/static/media/image2.dce3c145ec6fbbb6abcf.png",
     "static/media/image1.png": "/holo-next/static/media/image1.81f7a81514425abedb5d.png",
     "static/media/image3.png": "/holo-next/static/media/image3.df3f360c1a28e19654ee.png",
     "index.html": "/holo-next/index.html",
     "main.abd64e84.css.map": "/holo-next/static/css/main.abd64e84.css.map",
-    "main.7c2c9f5a.js.map": "/holo-next/static/js/main.7c2c9f5a.js.map"
+    "main.d7d9bfea.js.map": "/holo-next/static/js/main.d7d9bfea.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.7c2c9f5a.js"
+    "static/js/main.d7d9bfea.js"
   ]
 }

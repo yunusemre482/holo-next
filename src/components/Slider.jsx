@@ -4,7 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 import {items} from '../constants/data';
 import {mobile} from '../responsive/mobile';
-import Viewer from "../pages/Viewer";
 
 const Container = styled.div`
   width: 100%;
@@ -12,6 +11,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+
 `;
 
 const Arrow = styled.div`
@@ -44,7 +44,7 @@ const ItemContainer = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  ${mobile({display: 'none'})}
+  ${mobile({flexDirection:"column"})}
   background-color: ${(props) => props.backColor};
 `;
 
@@ -58,22 +58,26 @@ const Image = styled.img`
 const Title = styled.div`
   font-size: 36px;
   font-weight: 600;
+  ${mobile({fontSize:"28px"})}
 `;
 
 const ImageContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
+  ${mobile({marginRight:"15%",marginTop:"10px"})}
 `;
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 60px;
+  padding: 50px;
+  ${mobile({paddingTop:"10px"})} 
 `;
 const Description = styled.div`
   margin: 50px 0px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
-  letter-spacing: 1.4px;
+  letter-spacing: 3px;
+  ${mobile({height:"50%",fontSize:"16px",marginBottom:"30px"})}
 `;
 const Button = styled.button`
   padding: 10px;
@@ -84,7 +88,6 @@ const Button = styled.button`
   cursor: pointer;
 `;
 const Slider = ({changeId}) => {
-  
   const [gridIndex, setgridIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === 'left') {
@@ -93,7 +96,6 @@ const Slider = ({changeId}) => {
       setgridIndex(gridIndex < 2 ? gridIndex + 1 : 0);
     }
   };
-
 
   return (
     <Container>
@@ -109,7 +111,13 @@ const Slider = ({changeId}) => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Description>{item.description}</Description>
-              <Button onClick={()=>{changeId(item.id)}}>VIEW IN 3D  </Button>
+              <Button
+                onClick={() => {
+                  window.location.pathname = `/viewer/${item.id}`;
+                  console.log(window.location.pathname);
+                }}>
+                VIEW IN 3D{' '}
+              </Button>
             </InfoContainer>
           </ItemContainer>
         ))}

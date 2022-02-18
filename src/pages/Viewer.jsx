@@ -1,36 +1,44 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {CloseOutlined} from '@material-ui/icons';
 import styled from 'styled-components';
-
+import {COLORS} from '../constants/colors';
+import { mobile } from '../responsive/mobile';
 const Container = styled.div`
-  background-color: #ffff;
   position: absolute;
-  width: 100%;
-  height: 100vh;
-  z-index: 9999;
+  width: 97%;
+  height: 95vh;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 3%;
+  background-color: #cfcccc;
 `;
 
-const CloseButton = styled.div`
+const CloseButton = styled.button`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  displax: flex;
+  width: 50px;
+  height: 50px;
+  border-width: 0;
+  border-radius: 50%;
+  top: 30px;
+  right: 30px;
+  align-items: center;
+  justify-content: center;
+  background: #ddaa;
 `;
 
-const Viewer = ({id, changeId}) => {
-  return id ? (
-    <Container className="viewer">
-      {console.log(id)}
-      <holonext-viewer
-        style={{height: '97vh', width: '99vw'}}
-        sceneId={id}></holonext-viewer>
+const Viewer = ({sceneId}) => {
+  return (
+    <Container>
+      <holonext-viewer sceneId={sceneId}></holonext-viewer>
       <CloseButton
         onClick={() => {
-          changeId(null);
+          window.location.pathname = `/`;
         }}>
         <CloseOutlined />
       </CloseButton>
     </Container>
-  ) : null;
+  );
 };
 
 export default Viewer;

@@ -1,19 +1,11 @@
 import './App.css';
-import { useContext } from 'react'
-import HomePage from './pages/HomePage';
-import Viewer from './pages/Viewer';
-
-import { pagesMapping, RoutingContext } from './routes/Routing';
+import Route from './routes/Route';
 
 function App() {
-  const { page } = useContext(RoutingContext)
-
   return (
-    <>
-      {(pagesMapping.home === page) && <HomePage/>}
-      {(pagesMapping.viewer === page) && <Viewer />}
-    </>
-  )
+    <div>
+      <Route />
+    </div>
+  );
 }
-
 export default App;

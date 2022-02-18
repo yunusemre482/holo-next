@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
 
-
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
@@ -48,11 +47,10 @@ const HamburgerMenu = () => {
         ariaLabel="This is basic hamburger menu"
         icon={<SpeedDialIcon />}
         enablemouseactions="true"
-        sx={{position: 'absolute', bottom: "16px", left: "16px"}}
+        sx={{position: 'absolute', bottom: '16px', left: '16px'}}
         onClose={handleClose}
         onOpen={handleOpen}
-        open={open}
-    >
+        open={open}>
         {items.map((act) => (
           <SpeedDialAction
             key={act.name}

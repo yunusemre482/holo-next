@@ -113,8 +113,8 @@ const Slider = ({changeId}) => {
               <Description>{item.description}</Description>
               <Button
                 onClick={() => {
-                  window.location.pathname = `/holo-next/viewer/${item.id}`;
                   console.log(window.location.pathname);
+                  window.location.pathname = `/holo-next/viewer/${item.id}`;
                 }}>
                 VIEW IN 3D{' '}
               </Button>

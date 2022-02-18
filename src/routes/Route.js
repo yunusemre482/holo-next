@@ -23,8 +23,8 @@ const Route = () => {
     }, [])
 
     return (routeInfo.path === "/holo-next/")
-    ? <HomePage/>
-    : <Viewer sceneId={routeInfo.id}/>;
+    ? <HomePage sceneId={null}/>
+    : <HomePage sceneId={routeInfo.id}/>;
 }
 
 export default Route;

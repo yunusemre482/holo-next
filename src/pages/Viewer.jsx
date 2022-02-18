@@ -10,6 +10,7 @@ const Container = styled.div`
   padding: 20px;
   border-radius: 3%;
   background-color: #cfcccc;
+  z-index:9999
 `;
 
 const CloseButton = styled.button`

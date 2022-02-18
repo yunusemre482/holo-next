@@ -22,7 +22,7 @@ const Route = () => {
         };
     }, [])
 
-    return routeInfo.path === "/"
+    return routeInfo.path === "/holo-next"
     ? <HomePage/>
     : <Viewer sceneId={routeInfo.id}/>;
 }

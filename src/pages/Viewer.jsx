@@ -32,7 +32,7 @@ const Viewer = ({sceneId}) => {
       <holonext-viewer sceneId={sceneId}></holonext-viewer>
       <CloseButton
         onClick={() => {
-          window.location.pathname = `/holo-next/`;
+          window.location.pathname = `/holo-next`;
         }}>
         <CloseOutlined />
       </CloseButton>

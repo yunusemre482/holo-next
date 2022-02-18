@@ -23,3 +23,8 @@ npm start
 ## Demo
 
 To run demo click the link [Holo Next React App](https://yunusemre482.github.io/holo-next/)
+
+## Trailer Video Of Webpage
+
+https://user-images.githubusercontent.com/44340625/154638236-567f983a-a410-49a8-8fab-2a83a8e19b08.mov
+
